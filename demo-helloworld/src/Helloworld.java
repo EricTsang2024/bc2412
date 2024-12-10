@@ -128,6 +128,8 @@ public class Helloworld {
 
    char c = 'x';
    char c2 = '1';
+   char c3 = '!'
+   char c4 = ' '; //space
    // char c5 = ''; // ! at least one character
 
    // boolean
