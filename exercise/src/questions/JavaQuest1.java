@@ -46,7 +46,7 @@ public class JavaQuest1 {
     int subtract = second - first;
     System.out.println("The subtraction reuslt is " + subtract);
 
-    // // another sum
+    // another sum
    byte b1 = 60;
     byte b2 = 70;
     // // code here with tips, pls fix ...
