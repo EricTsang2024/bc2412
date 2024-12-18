@@ -65,7 +65,7 @@ public class Helloworld {
         System.out.println(x4); // 1.5
 
 
-    int x5 = 3.0 / 2;
+    // int x5 = 3.0 / 2;
 
     // step 1: 3.0 -> double value, 2 -> int value
     // step 2: double value / int value -> double value
@@ -105,13 +105,12 @@ public class Helloworld {
    double d1 = 10.2; // 10.2 -> double value
    double d2 = 10.2d; // 10.2d -> double value
    float f1 = 10.2f; // 10.2f -> float value
-   float f2 = 10.22222222
+   float f2 = 10.222222222222f;
 
    // conversion
    float f4 = 10.2f;
    double d3 = 10.2f; // safe. assign float value to double variable
-   float f5 =d3; // ! not safe
-
+//    float f5 =d3; // ! not safe
    double d4 = 10.2f; // upcasting(float -> double)
 
    double d5 = f4 + 10.2d;
@@ -128,7 +127,7 @@ public class Helloworld {
 
    char c = 'x';
    char c2 = '1';
-   char c3 = '!'
+   char c3 = '!';
    char c4 = ' '; //space
    // char c5 = ''; // ! at least one character
 
@@ -144,6 +143,50 @@ public class Helloworld {
    int age2 = 18;
    boolean isAdult = age2 >= 18;
    System.out.println(isAdult); //true
+
+   char q = 'a';
+   int u = q; // ! char value can be assigned to int ???
+   // char -> int
+
+   char q2 = 97;
+   System.out.println(q2); // 'a'
+   // char q3 = 70000;
+
+   // ASCII code (0 - 127)
+   // a -> 97
+   // b -> 98
+   // ...
+
+   // 0, A
+   // 48, 65
+   char q3 = 48;
+   System.out.println(q3); // 0
+   int u3 = q3;
+   System.out.println(u3); // 48
+
+   char q4 = 65;
+   System.out.println(q4); // A
+   int u4 = q4;
+   System.out.println(u4); // 65
+
+   char q5 = 10000; // int to char is not safe
+   System.out.println(q5);
+   char q6 = '你';
+   int u6 = q6;
+   System.out.println(u6);// 20320
+
+   // char q7 = 70000; // ! out of the range of char value
+
+   // byte -> short -> int -> long -> float -> double
+   float f11 = 97;
+   double d11 = 97;
+   // char -> int -> long -> float -> double
+
+   long l0 = 'a';
+   float f10 = 'a';
+   double d10 = 'a';
+
+
 
 
     }

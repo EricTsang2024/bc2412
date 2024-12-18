@@ -86,9 +86,30 @@ public class DemoString {
       System.out.println(s5.substring(0, s5.length())); //abc
       System.out.println(s5.substring(1, s5.length())); //bc
     System.out.println(s5.substring(1)); //bc
+String h = "hello"; 
+System.out.println(h.replace("ll", "xxx")); // hexxo
+System.out.println(h.indexOf("ll"));
+
+System.out.println(h.lastIndexOf('o'));
+System.out.println("hellollo".lastIndexOf("ll"));
+System.out.println(s1.isEmpty()); // false
+System.out.println("".isEmpty() );// true
+
+System.out.println(" " .isEmpty()); // false
+
+System.out.println( "hel lo   ". trim());// "hel lo"
+      System.out.println("abc".compareTo("bbb")); // -1
+
+      // Chain Method
+      System.out.println("hello".concat("ijk").concat("def").toUpperCase());// helloijkdef
+
+      // System.out.println( "hello".trim));
+      System.out.println("zcc".compareTo("zzg"));
+
+      // 
 
 
-  }
+}
 }
 
 
