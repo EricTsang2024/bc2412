@@ -65,7 +65,7 @@ public class DemoBigDecimal {
 
     double length = 4.2;
     double squareArea = BigDecimal.valueOf(length)//
-        .multiply(BigDecimal.valueOf(length)).doubleValue();
+        .multiply(BigDecimal.valueOf(length)).floatValue(); 
     System.out.println(squareArea); // 17.64
 
 

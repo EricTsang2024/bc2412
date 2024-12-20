@@ -36,8 +36,7 @@ public class DemoString {
     System.out.println("".isBlank()); // true
     System.out.println(" ".isBlank()); // true
 
-    System.out.println(" hel lo ".trim()+ "hhh"); // "hel lo"
-    System.out.println(" hel lo " + "hhh");
+    
     System.out.println("abc".compareTo("bbb")); // -1
     System.out.println("abc".compareTo("dbb")); // -3
     System.out.println("aac".compareTo("azb")); // -25 (a vs z)

@@ -1,5 +1,5 @@
 public class DemoString {
-  public static void main(String[] args){
+  public static void main(String[] args) {
     char x = 'a';
     x = 1; // !????
     // x = 1.1;
@@ -27,11 +27,11 @@ public class DemoString {
     // ! index starts from 0 to length-1
     System.out.println(password.charAt(8)); // !
     // System.out.println(password.charAt(-1)); // error
-    // System.out.println(password.charAt(9)); // error 
+    // System.out.println(password.charAt(9)); // error
 
     // print the last character of String.
     String password2 = "helloworld";
-    char lastChar = password2.charAt(password2.length() -1);
+    char lastChar = password2.charAt(password2.length() - 1);
     System.out.println(lastChar); // d
 
     String s1 = "abc";
@@ -46,15 +46,15 @@ public class DemoString {
     System.out.println(result3); // false
 
     // length()
-    int result4 = password. length();
+    int result4 = password.length();
     System.out.println(result4); // 9, the length of String Value
-    
+
     // Empty String
     String emptyString = "";
     System.out.println(emptyString.length()); // 0
-    boolean isStringEmpthy = "". equals(emptyString); // asking if emptyString equals to ""
-    System.out.println(isStringEmpthy); // 
-    
+    boolean isStringEmpthy = "".equals(emptyString); // asking if emptyString equals to ""
+    System.out.println(isStringEmpthy); //
+
     String s = "hello";
     System.out.println("hello".equals(s)); // true, asking if s equals to "hello"
 
@@ -63,53 +63,55 @@ public class DemoString {
 
     // 'c'.chartAt() // Primitive has no method (tool)
 
-      // isEmpty ()
-      String s5 = "abc";
-      // check if s5 is empty
-      boolean isEmpty = s5.length() == 0;
-      System.out.println(isEmpty); // false
-      System.out.println(s5.isEmpty()); // false
+    // isEmpty ()
+    String s5 = "abc";
+    // check if s5 is empty
+    boolean isEmpty = s5.length() == 0;
+    System.out.println(isEmpty); // false
+    System.out.println(s5.isEmpty()); // false
 
-      if (!s5.isEmpty()) {
+    if (!s5.isEmpty()) {
 
-      }
-      // substring
-      // abc
-      String substr = s5.substring(0, 2);
-     
-      
-      // ! s5 's value doesn't change
-      // ! substr is storing a new String value returned by "substring"
-      System.out.println(s5); // abc
-      System.out.println(substr); // ab
-      System.out.println(s5.substring(0, 3));// abc
-      System.out.println(s5.substring(0, s5.length())); //abc
-      System.out.println(s5.substring(1, s5.length())); //bc
-    System.out.println(s5.substring(1)); //bc
-String h = "hello"; 
-System.out.println(h.replace("ll", "xxx")); // hexxo
-System.out.println(h.indexOf("ll"));
-
-System.out.println(h.lastIndexOf('o'));
-System.out.println("hellollo".lastIndexOf("ll"));
-System.out.println(s1.isEmpty()); // false
-System.out.println("".isEmpty() );// true
-
-System.out.println(" " .isEmpty()); // false
-
-System.out.println( "hel lo   ". trim());// "hel lo"
-      System.out.println("abc".compareTo("bbb")); // -1
-
-      // Chain Method
-      System.out.println("hello".concat("ijk").concat("def").toUpperCase());// helloijkdef
-
-      // System.out.println( "hello".trim));
-      System.out.println("zcc".compareTo("zzg"));
-
-      // 
+    }
+    // substring
+    // abc
+    String substr = s5.substring(0, 2);
 
 
-}
+    // ! s5 's value doesn't change
+    // ! substr is storing a new String value returned by "substring"
+    System.out.println(s5); // abc
+    System.out.println(substr); // ab
+    System.out.println(s5.substring(0, 3));// abc
+    System.out.println(s5.substring(0, s5.length())); // abc
+    System.out.println(s5.substring(1, s5.length())); // bc
+    System.out.println(s5.substring(1)); // bc
+
+
+    String h = "hello";
+    System.out.println(h.replace("ll", "xxx")); // hexxo
+    System.out.println(h.indexOf("ll"));
+
+    System.out.println(h.lastIndexOf('o'));
+    System.out.println("hellollo".lastIndexOf("ll"));
+    System.out.println(s1.isEmpty()); // false
+    System.out.println("".isEmpty());// true
+
+    System.out.println(" ".isEmpty()); // false
+
+    System.out.println("hel lo   ".trim());// "hel lo"
+    System.out.println("abc".compareTo("bbb")); // -1
+
+    // Chain Method
+    System.out.println("hello".concat("ijk").concat("def").toUpperCase());// helloijkdef
+
+    // System.out.println( "hello".trim));
+    System.out.println("zcc".compareTo("zzg"));
+
+    //
+
+
+  }
 }
 
 
