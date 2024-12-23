@@ -61,8 +61,10 @@ public class DemoArray {
     }
 
     for (int i = 0; i < ascii.length; i++) {
-      System.out.println(ascii[i]);
+      
     }
+    System.out.println(Arrays.toString(ascii));
+    
     // convert the char value to int value, and then assign them to a new int
     // array
 
@@ -166,7 +168,7 @@ public class DemoArray {
     
     char[] chArr = "hello".toCharArray();
     for (int i = 0; i < chArr.length; i++) {
-      System.out.println("i=" + i + ", char[" + i+ "]=" +chArr[i]);
+      System.out.print("i=" + i + ", char[" + i+ "]=" +chArr[i]);
     }
     
     // olleh

@@ -1,35 +1,25 @@
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Arrays;
 
 public class Practice {
     public static void main(String[] args) {
-      String s8a = "abcba";
-      String s8b = "cba";
-      boolean isSubstringExist = false;
-      for ( int i = 0; i < s8a.length() - s8b.length() + 1; i++) {
-        if (s8a.substring(i, i + s8b.length()).equals(s8b)) {
-          isSubstringExist = true;
-          break;
+        // Add value 0.1 to each of value in array arr16
+        // Print: [0.3, 0.4, 0.6]
+        // Use: BigDecimal
+    
+        BigDecimal newValue =  BigDecimal.valueOf(0);
+        float arr [] = new float [] {0.2f, 0.3f, 0.5f};
+        BigDecimal arr1 [] = new BigDecimal[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+           newValue = BigDecimal.valueOf(arr[i]).add(BigDecimal.valueOf(0.1)); 
+           arr1[i] = newValue.setScale(1, RoundingMode.HALF_UP);                    
+          
         }
-      }
-     System.out.println(isSubstringExist);
+    System.out.println(Arrays.toString(arr1));
 
-    //   }
+    
+    }
+           
+    }
 
-      String substr = "lo";
-      String str2 = "hello";
-      // hel vs loq
-      // ell vs loq
-      // llo vs loq
-  
-      // for loop + substring
-      // boolean isSubstringExist = false;
-      // for (int i = 0; i < str2.length() - substr.length() + 1; i++) {
-      //   if (str2.substring(i, i + substr.length()).equals(substr)) {
-      //     isSubstringExist = true;
-      //     break;
-      //   }
-      // }
-      // System.out.println(isSubstringExist); // true
-  
-}
-}
