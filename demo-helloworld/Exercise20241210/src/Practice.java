@@ -1,25 +1,35 @@
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Arrays;
+import java.util.Random;
+public class Practice <T> {
+  
+  private T value;
 
-public class Practice {
-    public static void main(String[] args) {
-        // Add value 0.1 to each of value in array arr16
-        // Print: [0.3, 0.4, 0.6]
-        // Use: BigDecimal
+  public void setValue (T value) {
+    this.value = value;
+  }
+
+  public T getValue() {
+    return this.value;
+  }
+
+
+
+   public static void main(String[] args) {
+   Practice <int[]> x1 = new Practice<>();
+   x1.setValue(new int[] {1,2,3});
+   System.out.println(Arrays.toString(x1.getValue()));
+   
+
+      
+            
+
+
+        
+        
     
-        BigDecimal newValue =  BigDecimal.valueOf(0);
-        float arr [] = new float [] {0.2f, 0.3f, 0.5f};
-        BigDecimal arr1 [] = new BigDecimal[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-           newValue = BigDecimal.valueOf(arr[i]).add(BigDecimal.valueOf(0.1)); 
-           arr1[i] = newValue.setScale(1, RoundingMode.HALF_UP);                    
-          
-        }
-    System.out.println(Arrays.toString(arr1));
-
+       }
+     
+      }
     
-    }
-           
-    }
-

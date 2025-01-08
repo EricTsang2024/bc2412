@@ -30,16 +30,32 @@ public class JavaQuest10 {
     // System.out.println("Original Array : " + Arrays.toString(my_array));
 
     int [] newArr = new int[my_array.length] ;
-    int temp = 0;
-   
-      for (int i = 0; i < my_array.length; i++) {
-    if (indexPosition < my_array.length && indexPosition >= 0) {
-        indexPosition = my_array.length -1;
-        newValue = my_array[my_array.length -1];
+   for (int i = 0; i < my_array.length; i++) {
+    if (indexPosition > i && indexPosition < my_array.length-1) {
+        newArr[i] = my_array[i];
+    } else if(indexPosition == i && indexPosition < my_array.length-1) {
+      newArr[indexPosition] = newValue;
+    } else if(indexPosition < i && indexPosition < my_array.length-1){
+    newArr[i] = my_array[i-1]; 
+    } else if(indexPosition == my_array.length -1){
+      newArr[i] = my_array[i];
+  }
+  
+    
+  }
+  System.out.print(Arrays.toString(newArr));
+
     }
   }
+   
+    
+   
+    
+    
+    
+  
   
     // my_array = newArr;
     // System.out.println("New Array: " + Arrays.toString(newArr));
-  }
-}
+  
+
