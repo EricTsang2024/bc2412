@@ -26,12 +26,12 @@ public class Book1 {
     return Objects.hash(this.name);
   }
 
-  @Override
-  public String toString() {
-    return "Book[" //
-        + "name=" + this.name //
-        + "]";
-  }
+  // @Override
+  // public String toString() {
+  //   return "Book[" //
+  //       + "name=" + this.name //
+  //       + "]";
+  // }
 
   
 }

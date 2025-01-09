@@ -43,6 +43,11 @@ public class Pig extends Animal {
     // hash -> generate a new int number representing the object
   }
 
+  
+  public void Age() {
+     System.out.println("Your age is " + this.age);
+  }
+
   @Override
   public String toString() {
     return "Pig[" //
@@ -94,6 +99,6 @@ public class Pig extends Animal {
     System.out.println(myPig); // Pig[age=3, name=ABC]
     // toString()
     // hashCode()
-
+    myPig.Age();
   }
 }

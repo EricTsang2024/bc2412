@@ -4,4 +4,11 @@ public class Archer extends Hero{
     super(id);
   }
   
+  public int getMaxHp() {
+    return Heros.getMaxHp(Role.ARCHER, super.getLevel());
+  }
+
+  public int getMaxMp() {
+    return Hero.getMaxMp(Role.ARCHER, super.getLevel());
+  }
 }

@@ -2,34 +2,40 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Arrays;
 import java.util.Random;
-public class Practice <T> {
+
+  public class Practice {
+
+    private int age;
+    private String name;
+
+    public Practice(String name, int age) {
+      this.name = name;
+      this.age = age;
+    }
+
+    public int getAge() {
+      return this.age;
+    }
+
+    public String getName() {
+      return this.name;
+    }
+
+  @Override
+  public String toString() {
+    return "I am "+ this.age
+    + " years old and my name is "
+    + this.name+" .";
+  }
   
-  private T value;
 
-  public void setValue (T value) {
-    this.value = value;
+  public static void main(String[] args) {
+    Practice p1 = new Practice("AAA", 8);
+    System.out.println(p1);
+
+
+
   }
 
-  public T getValue() {
-    return this.value;
-  }
+}
 
-
-
-   public static void main(String[] args) {
-   Practice <int[]> x1 = new Practice<>();
-   x1.setValue(new int[] {1,2,3});
-   System.out.println(Arrays.toString(x1.getValue()));
-   
-
-      
-            
-
-
-        
-        
-    
-       }
-     
-      }
-    

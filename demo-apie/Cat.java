@@ -40,5 +40,6 @@ public class Cat extends Animal implements Walkable, Sleepable {
     System.out.println(cat.getName()); // ABC
     cat.walk(); // Cat itself method
     cat.eat(); // Override Parent method implementation
+    
   }
 }
