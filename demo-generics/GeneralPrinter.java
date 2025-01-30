@@ -2,14 +2,14 @@
 
 import java.util.Objects;
 
-public class GeneralPrinter<T> { // <T> present the scope of "T" inside the class
-  private T value;
+public class GeneralPrinter<A> { // <T> present the scope of "T" inside the class
+  private A value;
 
-  public GeneralPrinter(T value) {
+  public GeneralPrinter(A value) {
     this.value = value;
   }
 
-  public T getValue() {
+  public A getValue() {
     return this.value;
   }
 

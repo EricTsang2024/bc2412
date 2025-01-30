@@ -1,5 +1,10 @@
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
+
 public class ArrayListExercise {
   public static void main(String[] args) {
     // Exercise 1: Array List Basic Operations
@@ -34,12 +39,7 @@ public class ArrayListExercise {
     // 2d. Update "Mango" to "Peach".
     // 2e. Print the final list.
 
-    ArrayList<String> fruits = new ArrayList<>();
-    fruits.add("Apple");
-    fruits.add("Banana");
-    fruits.add("Mango");
-    fruits.add("Orange");
-
+    ArrayList<String> fruits = new ArrayList<>(Set.of("Apple", "Banana", "Mango", "Orange")); 
     Boolean found = false;
     for (String fruit:fruits) {
       // System.out.println(fruit);
@@ -52,11 +52,12 @@ public class ArrayListExercise {
     // for (String fruit:fruits) {
     //   System.out.println(fruit);
     // }
+    // int idx = fruits.indexOf(new String("Mango"));
+    // if (idx != -1)
+    // fruits.set(idx,"Peach");
+    fruits.remove(fruits.indexOf(new String("Mango")));
+    fruits.add("Peach");
 
-    for (String fruit:fruits) {
-    if (fruit.equals("Mango"))
-      fruit.replace("Mango", "Peach");    
-    }
     for (String fruit:fruits) {
       System.out.println(fruit);
     }
@@ -71,19 +72,12 @@ public class ArrayListExercise {
     // 3b. Remove duplicates from the list using a HashSet.
     // 3c. Print the list after removing duplicates.
 
-    ArrayList<Integer> integers3 = new ArrayList<>();
+    ArrayList<Integer> integers3 = new ArrayList<>(Set.of(10, 20, 30, 40, 50));
     integers3.add(10);
     integers3.add(20);
-    integers3.add(10);
-    integers3.add(30);
-    integers3.add(40);
-    integers3.add(20);
-    integers3.add(50);
-
-    HashSet<Integer> integers4 = new HashSet<>();
-
-
-
+    System.out.println(integers3);
+    HashSet<Integer> integers4 = new HashSet<>(integers3);
+    System.out.println(integers4);
 
 
     // Exercise 4: HashSet Basic Operations
@@ -93,11 +87,7 @@ public class ArrayListExercise {
     // 4c. Add "India" again. Print the result.
     // 4d. Print all elements in the set.
 
-    HashSet<String> countries = new HashSet<>();
-    countries.add("USA");
-    countries.add("India");
-    countries.add("China");
-    countries.add("Japan");
+    HashSet<String> countries = new HashSet<>(Set.of("USA", "India", "China", "Japan", "Canada"));
     countries.add("Canada");
     countries.add("India");
     System.out.println(countries);
@@ -109,13 +99,7 @@ public class ArrayListExercise {
     // 5c. Remove the number 2.2 from the set.
     // 5d. Print the size of the set.
 
-    HashSet<Double> numbers = new HashSet<>();
-    numbers.add(1.1);
-    numbers.add(2.2);
-    numbers.add(3.3);
-    numbers.add(4.4);
-    numbers.add(5.5);
-
+    HashSet<Double> numbers = new HashSet<>(Set.of(1.1, 2.2, 3.3, 4.4, 5.5));
     boolean isExist = false;
     for(Double number:numbers) {
       if (number.equals(3.3))
@@ -137,16 +121,8 @@ public class ArrayListExercise {
     // 6d. Find the common numbers of the two sets.
     // 6e. Print the resulting set.
 
-    HashSet<Integer> integers2 = new HashSet<>();
-    integers2.add(10);
-    integers2.add(20);
-    integers2.add(30);
-    integers2.add(40);
-    HashSet<Integer> integers5 = new HashSet<>();
-    integers5.add(30);
-    integers5.add(40);
-    integers5.add(50);
-    integers5.add(60);
+    HashSet<Integer> integers2 = new HashSet<>(Set.of(10, 20, 30, 40));  
+    HashSet<Integer> integers5 = new HashSet<>(Set.of(30, 40, 50, 60));
     HashSet<Integer> results = new HashSet<>();
     for (Integer integer5:integers5) {
       if(integers2.contains(integer5))
@@ -163,12 +139,9 @@ public class ArrayListExercise {
     // 7b. Convert the HashSet to an ArrayList.
     // 7c. Print the converted list.
 
-    HashSet<String> names = new HashSet<>();
-    names.add("Cherry");
-    names.add("Steve");
-    names.add("Chole");
-    names.add("Jenny");
-    names.add("Vicky");
+    HashSet<String> names = new HashSet<>(Set.of("Cherry", "Steve", "Chole", "Jenny", "Vicky"));
+    ArrayList<String> names2 = new ArrayList<>(names);
+    System.out.println(names2);
 
 
 
@@ -186,6 +159,40 @@ public class ArrayListExercise {
     // return "Student not found".
     // 8e. Create another ArrayList to store student with name starts with 'A'
 
+    ArrayList<Student> students = new ArrayList<>();
+    students.add(new Student(1," Alice"));
+    students.add(new Student(2," Bob"));
+    students.add(new Student(3, " Charlie"));
+
+    // Student[] students = new Student [3];
+    // students[0] = new Student(1, " Alice");
+    // students[1] = new Student(2, " Bob");
+    // students[2] = new Student(3, " Charlie");
+ 
+    for(Student student: students) {
+      System.out.println(student.getId()+ student.getName());
+    } 
+    
+    // students.remove(new Student(2," Bob"));
+    // System.out.println(students.size());
+
+    // String targetName = Student.searchById(students, 3);
+    // System.out.println(targetName);
+  
+    System.out.println(Student.searchById(students,1));
+
+    ArrayList<String> name = new ArrayList<>(Set.of("Charlie", "Bob", "Alice"));
+    name.sort(null);
+    System.out.println(name);
+
+    
+
+
+
+   
+    
+
+
 
 
     // Exercise 9: HashSet of Students
@@ -200,6 +207,72 @@ public class ArrayListExercise {
   public static class Student {
     private int id;
     private String name;
+    private Student [] students;
+    
+ 
+
+
+
+
+    // ArrayList<Student> students = new ArrayList<>();
+    public Student(int id, String name) {
+      this.id = id;
+      this.name = name;
+      students = new Student[0];
+    }
+
+    public Student() {
+   
+    }
+
+    public String getName() {
+      return this.name;
+    }
+
+    public int getId() {
+      return this.id;
+    }
+
+    public static String searchById(ArrayList<Student> students,int id) {
+      for (Student student : students) {
+        if (student.id == id)
+        return student.getName();
+      }
+      return "Student not found";
+    }
+    
+
+
+
+    @Override
+    public boolean equals(Object obj) {
+      if (this == obj)
+      return true;
+      if (!(obj instanceof Student))
+      return false;
+      Student student = (Student) obj;
+      return Objects.equals(this.name, student.getName())
+      && Objects.equals(this.id, student.getId());
+    }
+
+    @Override
+    public int hashCode() {
+      return Objects.hash(this.name, this.id);
+    }
+
+
+    // public static String isTarget(Student id) {
+      
+    //     for(Student student : students) {
+    //       if(student.getId()==id) 
+         
+    //       return this.id;
+    //     }
+        
+
+    
+
+
 
     // Constructor
     // getter, setter, etc.

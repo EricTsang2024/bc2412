@@ -24,5 +24,19 @@ public class Card {
   public char getSuite() {
     return this.suite;
   }
+  @Override
+  public String toString() {
+    // String rankStr = (rank == 'T')?
+    // "10" : String.valueOf(rank);
+
+    // String suiteStr = "";
+    // switch(suite) {
+    //   case 'D':
+    //   suiteStr = "Diamonds";
+    //   break;
+    // }
+    return rank + "of" + suite;
+  }
+
 
 }

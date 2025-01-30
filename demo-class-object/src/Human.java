@@ -86,6 +86,8 @@ public class Human {
     System.out.println(h1.bmiIndex()); // Normal
     System.out.println(h1.bmi()); // 22.46
     System.out.println(Human.bmi(1.74, 68));
+    System.out.println(Human.getGender(h1));
+   
 
     // Construct object by empty constructor
     Human h2 = new Human();

@@ -43,12 +43,12 @@ public class Circle {
         // area
         // BigDecimal
 
-          Circle1 c1 = new Circle1(3.0, " ");
+          Circle c1 = new Circle(3.0, " ");
           // Presentation
           System.out.println(c1.calculateArea());
 
           // Formula
-          System.out.println(Circle1.calculateArea2(3.0));
+          System.out.println(Circle.calculateArea2(3.0));
 
 
 
