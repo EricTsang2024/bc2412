@@ -5,11 +5,13 @@ public class Card {
   // "static final" -> constant
   // Constant naming convention
   public static final char[] SUITES = new char[] {'D', 'C', 'H', 'S'};
-  public static final char[] RANKS = new char[] {'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'};
+  public static final Rank[] RANKS = new char[] {Rank.ACE, Rank.TWO, Rank.THREE, //
+      Rank.FOUR, Rank.FIVE, Rank.SIX, Rank.SEVEN, Rank.EIGHT, Rank.NINE, //
+      Rank.TEN, Rank.JACK, Rank.QUEEN, Rank.KING};
 
   public static final int x = 3;
 
-  private char rank; // 'A', '2' ..'T', 'J', 'Q' 'K'
+  private Rank rank; // 'A', '2' ..'T', 'J', 'Q' 'K'
   private char suite; // 'D', 'C', 'H', 'S'
 
   public Card(char rank, char suite) {
@@ -17,26 +19,16 @@ public class Card {
     this.suite = suite;
   }
 
-  public char getRank() {
+  public Rank getRank() {
     return this.rank;
   }
 
   public char getSuite() {
     return this.suite;
   }
-  @Override
-  public String toString() {
-    // String rankStr = (rank == 'T')?
-    // "10" : String.valueOf(rank);
 
-    // String suiteStr = "";
-    // switch(suite) {
-    //   case 'D':
-    //   suiteStr = "Diamonds";
-    //   break;
-    // }
-    return rank + "of" + suite;
+  public boolean isSameRank(Card card) {
+    return this.rank == card.getRank();
   }
-
 
 }
